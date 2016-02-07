@@ -29,7 +29,7 @@ class Brand(db.Model):
     name = db.Column(db.String(50), nullable=False)
     founded = db.Column(db.Integer)
     discontinued = db.Column(db.Integer)
-    headquarters = db.Column(db.String(50), db.ForeignKey('brands.name'))
+    headquarters = db.Column(db.String(50))
 
 # End Part 1
 ##############################################################################
