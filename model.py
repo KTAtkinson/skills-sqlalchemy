@@ -15,7 +15,7 @@ db = SQLAlchemy()
 class Model(db.Model):
 
     __tablename__ = "models"
-    model_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     year = db.Column(db.Integer, nullable=False)
     brand_name = db.Column(db.String(50), db.ForeignKey('brands.name'))
     name = db.Column(db.String(50), nullable=False)
@@ -25,7 +25,7 @@ class Model(db.Model):
 class Brand(db.Model):
 
     __tablename__ = "brands"
-    brand_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     founded = db.Column(db.Integer)
     discontinued = db.Column(db.Integer)
